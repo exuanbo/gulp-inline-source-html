@@ -12,10 +12,15 @@ This plugin is based on [fmal/gulp-inline-source](https://github.com/fmal/gulp-i
 
 ## Table of Contents
 
+- [Description](#description)
 - [How it works](#how-it-works)
 - [Installation](#installation)
 - [Usage](#usage)
 - [License](#license)
+
+## Description
+
+Inline and compress tags that contain the `inline` attribute. Supports `<script>`, `<link>`, and `<img>` (including `*.svg` sources) tags by default.
 
 ## How it works
 
