@@ -6,7 +6,7 @@ const should = require('should')
 const Vinyl = require('vinyl')
 const inlineSource = require('../index.js')
 
-function getFile(filePath, contents) {
+const getFile = (filePath, contents) => {
   return new Vinyl({
     path: filePath,
     base: path.dirname(filePath),
@@ -14,18 +14,17 @@ function getFile(filePath, contents) {
   })
 }
 
-function getFixture(filePath) {
+const getFixture = filePath => {
   return getFile(path.join(__dirname, 'fixtures', filePath))
 }
 
-function getExpected(filePath) {
+const getExpected = filePath => {
   return getFile(path.join(__dirname, 'expected', filePath))
 }
 
-function compare(stream, fixtureName, expectedName, done) {
+const compare = (stream, fixtureName, expectedName) => {
   stream.on('error', error => {
     should.exist(error)
-    done(error)
   })
 
   stream.on('data', file => {
@@ -34,7 +33,6 @@ function compare(stream, fixtureName, expectedName, done) {
 
     const contents = String(file.contents)
     contents.should.equal(String(getExpected(expectedName).contents))
-    done()
   })
 
   stream.write(getFixture(fixtureName))
@@ -42,44 +40,43 @@ function compare(stream, fixtureName, expectedName, done) {
 }
 
 describe('gulp-inline-source', () => {
-  it('Should inline <script> tag', done => {
-    compare(inlineSource(), 'script.html', 'inlined-script.html', done)
+  it('Should inline <script> tag', async () => {
+    await compare(inlineSource(), 'script.html', 'inlined-script.html')
   })
 
-  it('Should inline <script> tag with ES6 source', done => {
-    compare(inlineSource(), 'script-es6.html', 'inlined-script.html', done)
+  it('Should inline <script> tag with ES6 source', async () => {
+    await compare(inlineSource(), 'script-es6.html', 'inlined-script.html')
   })
 
-  it('Should inline <link> tag', done => {
-    compare(inlineSource(), 'link.html', 'inlined-link.html', done)
+  it('Should inline <link> tag', async () => {
+    await compare(inlineSource(), 'link.html', 'inlined-link.html')
   })
 
-  it('Should inline <img> tag with SVG source', done => {
-    compare(inlineSource(), 'image-svg.html', 'inlined-image-svg.html', done)
+  it('Should inline <img> tag with SVG source', async () => {
+    await compare(inlineSource(), 'image-svg.html', 'inlined-image-svg.html')
   })
 
-  it('Should inline <img> tag with PNG source', done => {
-    compare(inlineSource(), 'image-png.html', 'inlined-image-png.html', done)
+  it('Should inline <img> tag with PNG source', async () => {
+    await compare(inlineSource(), 'image-png.html', 'inlined-image-png.html')
   })
 
-  it('works with type and media attributes', done => {
-    compare(
+  it('works with type and media attributes', async () => {
+    await compare(
       inlineSource(),
       'with-attributes.html',
-      'inlined-with-attributes.html',
-      done
+      'inlined-with-attributes.html'
     )
   })
 
-  it('works with relative paths', done => {
-    compare(inlineSource(), 'script-relative.html', 'inlined-script.html', done)
+  it('works with relative paths', async () => {
+    await compare(inlineSource(), 'script-relative.html', 'inlined-script.html')
   })
 
-  it('Should inline assets without minification', done => {
+  it('Should inline assets without minification', async () => {
     const stream = inlineSource({
       compress: false
     })
 
-    compare(stream, 'nominify.html', 'inlined-nominify.html', done)
+    await compare(stream, 'nominify.html', 'inlined-nominify.html')
   })
 })
