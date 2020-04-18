@@ -8,7 +8,7 @@ const PLUGIN_NAME = '@exuanbo/gulp-inline-source'
 
 /**
  * inline-source wrapper
- * @param {Object} options - https://github.com/popeindustries/inline-source#usage
+ * @param {Object} [options] - https://github.com/popeindustries/inline-source#usage
  */
 const gulpInlineSource = options => {
   return through.obj((file, encoding, callback) => {
