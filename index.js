@@ -7,7 +7,7 @@ const through = require('through2')
 const PLUGIN_NAME = '@exuanbo/gulp-inline-source'
 
 const gulpInlineSource = options => {
-  return through.obj(function (file, encoding, callback) {
+  return through.obj((file, encoding, callback) => {
     if (file.isNull()) {
       return callback(null, file)
     }
@@ -26,14 +26,15 @@ const gulpInlineSource = options => {
       }
     }
 
-    inlineSource(file.contents.toString(), fileOptions)
-      .then(html => {
+    ;(async () => {
+      try {
+        const html = await inlineSource(file.contents.toString(), fileOptions)
         file.contents = Buffer.from(html)
         return callback(null, file)
-      })
-      .catch(err => {
+      } catch (err) {
         return callback(new PluginError(PLUGIN_NAME, err))
-      })
+      }
+    })()
   })
 }
 
