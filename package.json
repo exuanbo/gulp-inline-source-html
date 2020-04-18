@@ -1,6 +1,6 @@
 {
   "name": "@exuanbo/gulp-inline-source",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "A Gulp.js plugin for inlining flagged js, css, and img sources in html with inline-source",
   "main": "index.js",
   "directories": {
