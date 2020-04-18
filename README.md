@@ -8,6 +8,8 @@
 [![David](https://img.shields.io/david/exuanbo/gulp-inline-source.svg?style=flat-square)](https://david-dm.org/exuanbo/gulp-inline-source)
 [![License](https://img.shields.io/github/license/exuanbo/gulp-inline-source.svg?style=flat-square)](https://github.com/exuanbo/gulp-inline-source/blob/master/LICENSE)
 
+This plugin is based on [fmal/gulp-inline-source](https://github.com/fmal/gulp-inline-source), which is no longer maintained. It supports Gulp.js v4 and ES6 / ES2015.
+
 ## Table of Contents
 
 - [How it works](#how-it-works)
@@ -100,7 +102,7 @@ Available `options` include:
 - `svgAsImage`: convert `<img inline src="*.svg" />` to `<img>` and not `<svg>` (default `false`)
 - `swallowErrors`: enable/disable suppression of errors (default `false`)
 
-Checkout [popeindustries/inline-source](https://github.com/popeindustries/inline-source#usage) for more reference.
+For documentation about the options-object, See [popeindustries/inline-source](https://github.com/popeindustries/inline-source#usage).
 
 ## License
 
