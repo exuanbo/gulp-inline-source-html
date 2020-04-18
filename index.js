@@ -2,7 +2,6 @@
 
 const { inlineSource } = require('inline-source')
 const PluginError = require('plugin-error')
-const path = require('path')
 const through = require('through2')
 
 const PLUGIN_NAME = '@exuanbo/gulp-inline-source'
@@ -18,7 +17,6 @@ const gulpInlineSource = options => {
     }
 
     const fileOptions = {
-      rootpath: path.dirname(file.path),
       htmlpath: file.path
     }
 
@@ -30,7 +28,7 @@ const gulpInlineSource = options => {
 
     inlineSource(file.contents.toString(), fileOptions)
       .then(html => {
-        file.contents = Buffer.from(html || '')
+        file.contents = Buffer.from(html)
         return callback(null, file)
       })
       .catch(err => {
