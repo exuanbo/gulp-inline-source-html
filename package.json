@@ -37,7 +37,12 @@
   "keywords": [
     "gulpplugin",
     "gulp",
-    "inline-source"
+    "inline-source",
+    "inline",
+    "html",
+    "js",
+    "css",
+    "svg"
   ],
   "author": {
     "name": "exuanbo",
