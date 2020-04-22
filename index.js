@@ -11,7 +11,7 @@ const PLUGIN_NAME = '@exuanbo/gulp-inline-source'
  * @param {Object} [options] - https://github.com/popeindustries/inline-source#usage
  */
 const gulpInlineSource = options => {
-  return through.obj((file, encoding, callback) => {
+  return through.obj(async (file, encoding, callback) => {
     if (file.isNull()) {
       return callback(null, file)
     }
@@ -30,15 +30,13 @@ const gulpInlineSource = options => {
       }
     }
 
-    ;(async () => {
-      try {
-        const html = await inlineSource(file.contents.toString(), fileOptions)
-        file.contents = Buffer.from(html)
-        return callback(null, file)
-      } catch (err) {
-        return callback(new PluginError(PLUGIN_NAME, err))
-      }
-    })()
+    try {
+      const html = await inlineSource(file.contents.toString(), fileOptions)
+      file.contents = Buffer.from(html)
+      return callback(null, file)
+    } catch (err) {
+      return callback(new PluginError(PLUGIN_NAME, err))
+    }
   })
 }
 
