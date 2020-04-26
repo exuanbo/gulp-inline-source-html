@@ -1,4 +1,4 @@
-# gulp-inline-source
+# @exuanbo/gulp-inline-source
 
 > A Gulp.js plugin for inlining flagged js, css, and img sources in html with [inline-source](https://github.com/popeindustries/inline-source)
 
