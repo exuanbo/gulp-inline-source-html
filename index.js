@@ -36,7 +36,7 @@ const gulpInlineSource = options => {
         file.contents = Buffer.from(html)
         callback(null, file)
       } catch (err) {
-        callback(new PluginError(PLUGIN_NAME, err))
+        return callback(new PluginError(PLUGIN_NAME, err))
       }
     })()
   })
