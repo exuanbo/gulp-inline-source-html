@@ -22,7 +22,7 @@ const gulpInlineSource = (options = {}) => {
       }
 
       const defaultOptions = {
-        htmlpath: file.path
+        rootpath: file.base
       }
 
       const pluginOptions = { ...defaultOptions, ...options }
