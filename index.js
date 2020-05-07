@@ -32,7 +32,7 @@ const gulpInlineSource = options => {
 
     ;(async () => {
       try {
-        const html = await inlineSource(file.contents.toString(), fileOptions)
+        const html = await inlineSource(String(file.contents), fileOptions)
         file.contents = Buffer.from(html)
         callback(null, file)
       } catch (err) {
