@@ -10,7 +10,7 @@ const PLUGIN_NAME = '@exuanbo/gulp-inline-source'
  * inline-source wrapper
  * @param {Object} [options] - https://github.com/popeindustries/inline-source#usage
  */
-const gulpInlineSource = options => {
+const gulpInlineSource = (options = {}) => {
   return through.obj((file, encoding, callback) => {
     if (file.isNull()) {
       return callback(null, file)
@@ -20,19 +20,15 @@ const gulpInlineSource = options => {
       return callback(new PluginError(PLUGIN_NAME, 'Streaming not supported'))
     }
 
-    const fileOptions = {
+    const defaultOptions = {
       htmlpath: file.path
     }
 
-    if (options) {
-      for (const i in options) {
-        fileOptions[i] = options[i]
-      }
-    }
+    const pluginOptions = { ...defaultOptions, ...options }
 
     ;(async () => {
       try {
-        const html = await inlineSource(String(file.contents), fileOptions)
+        const html = await inlineSource(String(file.contents), pluginOptions)
         file.contents = Buffer.from(html)
         callback(null, file)
       } catch (err) {
