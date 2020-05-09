@@ -24,17 +24,19 @@ const getExpected = filePath => {
 }
 
 const compare = (stream, fixtureName, expectedName, done) => {
-  stream.on('error', error => {
-    should.exist(error)
-    done(error)
+  stream.on('error', err => {
+    should.exist(err)
+    done(err)
   })
 
   stream.on('data', file => {
     should.exist(file)
     should.exist(file.contents)
 
-    const contents = String(file.contents)
-    contents.should.equal(String(getExpected(expectedName).contents))
+    should.equal(
+      String(file.contents),
+      String(getExpected(expectedName).contents)
+    )
     done()
   })
 
