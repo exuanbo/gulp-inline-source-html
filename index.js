@@ -27,8 +27,11 @@ const gulpInlineSource = (options = {}) => {
 
       const pluginOptions = { ...defaultOptions, ...options }
 
-      const html = await inlineSource(String(file.contents), pluginOptions)
-      file.contents = Buffer.from(html)
+      const newFileContents = await inlineSource(
+        String(file.contents),
+        pluginOptions
+      )
+      file.contents = Buffer.from(newFileContents)
       callback(null, file)
     } catch (err) {
       return callback(new PluginError(PLUGIN_NAME, err))
