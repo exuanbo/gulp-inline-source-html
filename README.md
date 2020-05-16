@@ -3,8 +3,8 @@
 > A Gulp.js plugin for inlining flagged js, css, and img sources in html with [inline-source](https://github.com/popeindustries/inline-source)
 
 [![npm (scoped)](https://img.shields.io/npm/v/@exuanbo/gulp-inline-source.svg?style=flat-square)](https://www.npmjs.com/package/@exuanbo/gulp-inline-source)
-[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-yellow.svg?style=flat-square)](https://standardjs.com)
-[![Travis (.com)](https://img.shields.io/travis/com/exuanbo/gulp-inline-source.svg?style=flat-square)](http://travis-ci.com/exuanbo/gulp-inline-source)
+[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg?style=flat-square)](https://standardjs.com)
+[![Travis (.com)](https://img.shields.io/travis/com/exuanbo/gulp-inline-source/master.svg?style=flat-square)](http://travis-ci.com/exuanbo/gulp-inline-source)
 [![David](https://img.shields.io/david/exuanbo/gulp-inline-source.svg?style=flat-square)](https://david-dm.org/exuanbo/gulp-inline-source)
 [![License](https://img.shields.io/github/license/exuanbo/gulp-inline-source.svg?style=flat-square)](https://github.com/exuanbo/gulp-inline-source/blob/master/LICENSE)
 
