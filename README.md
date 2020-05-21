@@ -70,6 +70,7 @@ Output file
 `inlineSource(options?: Object)`
 
 ```javascript
+const gulp = require('gulp')
 const inlineSource = require('@exuanbo/gulp-inline-source')
 
 gulp.task('inlineSource', () => {
@@ -80,6 +81,7 @@ gulp.task('inlineSource', () => {
 ```
 
 ```javascript
+const gulp = require('gulp')
 const inlineSource = require('@exuanbo/gulp-inline-source')
 
 gulp.task('inlineSource', () => {
