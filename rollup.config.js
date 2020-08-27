@@ -6,7 +6,7 @@ export default {
   plugins: [commonjs()],
   external: Object.keys(pkg.dependencies),
   output: {
-    file: 'index.es.js',
+    file: pkg.module,
     format: 'es'
   }
 }
