@@ -39,6 +39,7 @@
     "through2": "^4.0.0"
   },
   "devDependencies": {
+    "@rollup/plugin-commonjs": "^15.0.0",
     "eslint": "7.7.0",
     "eslint-config-prettier": "6.11.0",
     "eslint-config-prettier-standard": "3.0.1",
@@ -51,6 +52,7 @@
     "mocha": "8.1.2",
     "prettier": "2.1.1",
     "prettier-config-standard": "1.0.1",
+    "rollup": "^2.26.6",
     "should": "13.2.3",
     "vinyl": "2.2.0"
   },
