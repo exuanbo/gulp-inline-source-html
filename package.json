@@ -3,11 +3,13 @@
   "version": "1.2.1",
   "description": "A Gulp.js plugin for inlining flagged js, css, and img sources in html with inline-source",
   "main": "index.js",
+  "module": "index.es.js",
   "directories": {
     "test": "test"
   },
   "scripts": {
-    "test": "eslint \"**/index*.js\" && mocha"
+    "test": "eslint 'index.js' && mocha && npm run build",
+    "build": "rollup -c"
   },
   "repository": {
     "type": "git",
