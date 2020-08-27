@@ -1,4 +1,3 @@
-renovate.json
 test/expected/
 test/fixtures/
 *.tgz
