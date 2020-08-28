@@ -4,13 +4,13 @@ const { inlineSource } = require('inline-source')
 const PluginError = require('plugin-error')
 const through = require('through2')
 
-const PLUGIN_NAME = '@exuanbo/gulp-inline-source'
+const PLUGIN_NAME = 'gulp-inline-source-html'
 
 /**
  * inline-source wrapper
  * @param {Object} [options] - https://github.com/popeindustries/inline-source#usage
  */
-const gulpInlineSource = (options = {}) => {
+const gulpInlineSourceHtml = (options = {}) => {
   return through.obj(async (file, _, callback) => {
     try {
       if (file.isNull()) {
@@ -39,4 +39,4 @@ const gulpInlineSource = (options = {}) => {
   })
 }
 
-module.exports = gulpInlineSource
+module.exports = gulpInlineSourceHtml

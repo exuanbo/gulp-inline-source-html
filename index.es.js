@@ -6,13 +6,13 @@ const { inlineSource } = require$$0;
 
 
 
-const PLUGIN_NAME = '@exuanbo/gulp-inline-source';
+const PLUGIN_NAME = 'gulp-inline-source-html';
 
 /**
  * inline-source wrapper
  * @param {Object} [options] - https://github.com/popeindustries/inline-source#usage
  */
-const gulpInlineSource = (options = {}) => {
+const gulpInlineSourceHtml = (options = {}) => {
   return through.obj(async (file, _, callback) => {
     try {
       if (file.isNull()) {
@@ -41,6 +41,6 @@ const gulpInlineSource = (options = {}) => {
   })
 };
 
-var gulpInlineSource_1 = gulpInlineSource;
+var gulpInlineSource = gulpInlineSourceHtml;
 
-export default gulpInlineSource_1;
+export default gulpInlineSource;
