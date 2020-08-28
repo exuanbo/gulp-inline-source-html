@@ -13,7 +13,7 @@ const PLUGIN_NAME = '@exuanbo/gulp-inline-source';
  * @param {Object} [options] - https://github.com/popeindustries/inline-source#usage
  */
 const gulpInlineSource = (options = {}) => {
-  return through.obj(async (file, encoding, callback) => {
+  return through.obj(async (file, _, callback) => {
     try {
       if (file.isNull()) {
         return callback(null, file)
