@@ -1,12 +1,12 @@
-# @exuanbo/gulp-inline-source
+# gulp-inline-source-html
 
-> A Gulp.js plugin for inlining flagged js, css, and img sources in html with [inline-source](https://github.com/popeindustries/inline-source)
+> Inlines flagged js, css, and img sources in html with [inline-source](https://github.com/popeindustries/inline-source)
 
-[![npm (scoped)](https://img.shields.io/npm/v/@exuanbo/gulp-inline-source.svg?style=flat-square)](https://www.npmjs.com/package/@exuanbo/gulp-inline-source)
+[![npm](https://img.shields.io/npm/v/gulp-inline-source-html.svg?style=flat-square)](https://www.npmjs.com/package/gulp-inline-source-html)
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg?style=flat-square)](https://standardjs.com)
-[![Travis (.com)](https://img.shields.io/travis/com/exuanbo/gulp-inline-source/master.svg?style=flat-square)](http://travis-ci.com/exuanbo/gulp-inline-source)
-[![David](https://img.shields.io/david/exuanbo/gulp-inline-source.svg?style=flat-square)](https://david-dm.org/exuanbo/gulp-inline-source)
-[![License](https://img.shields.io/github/license/exuanbo/gulp-inline-source.svg?style=flat-square)](https://github.com/exuanbo/gulp-inline-source/blob/master/LICENSE)
+[![Travis (.com)](https://img.shields.io/travis/com/exuanbo/gulp-inline-source-html/master.svg?style=flat-square)](http://travis-ci.com/exuanbo/gulp-inline-source-html)
+[![David](https://img.shields.io/david/gulp-inline-source-html.svg?style=flat-square)](https://david-dm.org/gulp-inline-source-html)
+[![License](https://img.shields.io/github/license/exuanbo/gulp-inline-source-html.svg?style=flat-square)](https://github.com/exuanbo/gulp-inline-source-html/blob/master/LICENSE)
 
 This plugin is based on [fmal/gulp-inline-source](https://github.com/fmal/gulp-inline-source), which is no longer maintained. It now supports Gulp.js v4 and ES6 / ES2015.
 
@@ -24,10 +24,10 @@ Inline and compress tags that contain the `inline` attribute. Supports `<script>
 
 ## Installation
 
-Install `@exuanbo/gulp-inline-source` as a development dependency
+Install `gulp-inline-source-html` as a development dependency
 
 ```bash
-npm install --save-dev @exuanbo/gulp-inline-source
+npm install --save-dev gulp-inline-source-html
 ```
 
 ## How it works
@@ -70,28 +70,31 @@ Output file
 `inlineSource(options?: Object)`
 
 ```javascript
-const gulp = require('gulp')
-const inlineSource = require('@exuanbo/gulp-inline-source')
+const { task, src, dest } = require('gulp')
+const inlineSource = require('gulp-inline-source-html')
 
-gulp.task('inlineSource', () => {
-  return gulp.src('src/*.html')
+task('inlineSource', () => {
+  return src('src/*.html')
     .pipe(inlineSource())
-    .pipe(gulp.dest('dist'))
+    .pipe(dest('dist'))
 })
 ```
 
-```javascript
-const gulp = require('gulp')
-const inlineSource = require('@exuanbo/gulp-inline-source')
+or you can
 
-gulp.task('inlineSource', () => {
+```javascript
+import inlineSource from 'gulp-inline-source-html'
+```
+
+```javascript
+task('inlineSource', () => {
   const options = {
     compress: false
   }
 
-  return gulp.src('src/*.html')
+  return src('src/*.html')
     .pipe(inlineSource(options))
-    .pipe(gulp.dest('dist'))
+    .pipe(dest('dist'))
 })
 ```
 
@@ -113,7 +116,7 @@ For documentation about the options-object, see [popeindustries/inline-source](h
 
 ## License
 
-[MIT](https://github.com/exuanbo/gulp-inline-source/blob/master/LICENSE)
+[MIT](https://github.com/exuanbo/gulp-inline-source-html/blob/master/LICENSE)
 
 ## Donate
 
