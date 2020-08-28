@@ -1,7 +1,7 @@
 {
-  "name": "@exuanbo/gulp-inline-source",
-  "version": "1.2.1",
-  "description": "A Gulp.js plugin for inlining flagged js, css, and img sources in html with inline-source",
+  "name": "gulp-inline-source-html",
+  "version": "0.0.0",
+  "description": "Gulp.js plugin for inlining flagged js, css, and img sources in html with inline-source",
   "main": "index.js",
   "module": "index.es.js",
   "directories": {
@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/exuanbo/gulp-inline-source.git"
+    "url": "git+https://github.com/exuanbo/gulp-inline-source-html.git"
   },
   "keywords": [
     "gulpplugin",
@@ -28,14 +28,13 @@
   ],
   "author": {
     "name": "exuanbo",
-    "email": "exuanbo@protonmail.com",
-    "url": "https://exuanbo.xyz"
+    "email": "exuanbo@protonmail.com"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/exuanbo/gulp-inline-source/issues"
+    "url": "https://github.com/exuanbo/gulp-inline-source-html/issues"
   },
-  "homepage": "https://github.com/exuanbo/gulp-inline-source#readme",
+  "homepage": "https://github.com/exuanbo/gulp-inline-source-html#readme",
   "dependencies": {
     "inline-source": "^7.2.0",
     "plugin-error": "^1.0.1",
@@ -61,7 +60,6 @@
     "vinyl": "2.2.0"
   },
   "publishConfig": {
-    "registry": "https://registry.npmjs.org/",
-    "access": "public"
+    "registry": "https://registry.npmjs.org/"
   }
 }
