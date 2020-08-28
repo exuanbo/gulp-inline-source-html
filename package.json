@@ -1,6 +1,6 @@
 {
   "name": "gulp-inline-source-html",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Inlines flagged js, css, and img sources in html with inline-source",
   "main": "index.js",
   "module": "index.es.js",
