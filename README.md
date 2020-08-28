@@ -5,7 +5,7 @@
 [![npm](https://img.shields.io/npm/v/gulp-inline-source-html.svg?style=flat-square)](https://www.npmjs.com/package/gulp-inline-source-html)
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg?style=flat-square)](https://standardjs.com)
 [![Travis (.com)](https://img.shields.io/travis/com/exuanbo/gulp-inline-source-html/master.svg?style=flat-square)](http://travis-ci.com/exuanbo/gulp-inline-source-html)
-[![David](https://img.shields.io/david/gulp-inline-source-html.svg?style=flat-square)](https://david-dm.org/gulp-inline-source-html)
+[![David](https://img.shields.io/david/exuanbo/gulp-inline-source-html.svg?style=flat-square)](https://david-dm.org/exuanbo/gulp-inline-source-html)
 [![License](https://img.shields.io/github/license/exuanbo/gulp-inline-source-html.svg?style=flat-square)](https://github.com/exuanbo/gulp-inline-source-html/blob/master/LICENSE)
 
 This plugin is based on [fmal/gulp-inline-source](https://github.com/fmal/gulp-inline-source), which is no longer maintained. It now supports Gulp.js v4 and ES6 / ES2015.
