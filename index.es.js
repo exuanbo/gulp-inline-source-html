@@ -41,6 +41,6 @@ const gulpInlineSourceHtml = (options = {}) => {
   })
 };
 
-var gulpInlineSource = gulpInlineSourceHtml;
+var gulpInlineSourceHtml_1 = gulpInlineSourceHtml;
 
-export default gulpInlineSource;
+export default gulpInlineSourceHtml_1;
