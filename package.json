@@ -19,8 +19,8 @@
   "keywords": [
     "gulpplugin",
     "gulp",
+    "gulp-inline-source",
     "inline-source",
-    "inline",
     "html",
     "js",
     "css",
