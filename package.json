@@ -8,9 +8,9 @@
     "test": "test"
   },
   "scripts": {
-    "test": "eslint 'index.js' && mocha",
+    "test": "mocha",
     "pretest": "rollup -c",
-    "build": "rimraf index.es.js && npm test"
+    "build": "rimraf dist && npm test"
   },
   "repository": {
     "type": "git",
