@@ -36,15 +36,13 @@ Targate file `src/html/index.html`
 
 ```html
 <html>
-  <head>
-    <script src="../js/inlineScript.js" inline></script>
-  </head>
   <body>
+    <script src="../js/app.js" inline></script>
   </body>
 </html>
 ```
 
-Source file `src/js/inlineScript.js`
+Source file `src/js/app.js`
 
 ```js
 function test() {
@@ -57,10 +55,8 @@ Output file
 
 ```html
 <html>
-  <head>
-    <script>function test(){const a="lorem ipsum";return a}</script>
-  </head>
   <body>
+    <script>function test(){const a="lorem ipsum";return a}</script>
   </body>
 </html>
 ```
@@ -88,12 +84,8 @@ import inlineSource from 'gulp-inline-source-html'
 
 ```javascript
 task('inlineSource', () => {
-  const options = {
-    compress: false
-  }
-
   return src('src/*.html')
-    .pipe(inlineSource(options))
+    .pipe(inlineSource({ compress: false }))
     .pipe(dest('dist'))
 })
 ```
