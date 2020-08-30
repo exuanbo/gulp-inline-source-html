@@ -2,11 +2,18 @@ const commonjs = require('@rollup/plugin-commonjs')
 const pkg = require('./package.json')
 
 export default {
-  input: 'index.js',
+  input: 'src/index.js',
   plugins: [commonjs()],
   external: Object.keys(pkg.dependencies),
-  output: {
-    file: pkg.module,
-    format: 'es'
-  }
+  output: [
+    {
+      file: pkg.main,
+      format: 'cjs',
+      exports: 'auto'
+    },
+    {
+      file: pkg.module,
+      format: 'es'
+    }
+  ]
 }
