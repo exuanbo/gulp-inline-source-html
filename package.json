@@ -55,7 +55,7 @@
     "mocha": "8.2.1",
     "prettier": "2.1.2",
     "prettier-config-standard": "1.0.1",
-    "rollup": "2.33.1",
+    "rollup": "2.33.2",
     "vinyl": "2.2.1"
   }
 }
