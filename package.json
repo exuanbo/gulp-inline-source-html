@@ -42,7 +42,7 @@
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "16.0.0",
-    "chai": "4.2.0",
+    "chai": "4.3.4",
     "eslint": "7.18.0",
     "eslint-config-prettier": "6.15.0",
     "eslint-config-prettier-standard": "3.0.1",
